@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <defs>
+    <!-- Glow Filters -->
+    <filter id="glow-yellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Turntable Platter & Vinyl Record -->
+  <g transform="translate(60, 60)">
+    <!-- Outer Vinyl Rim -->
+    <circle cx="0" cy="0" r="48" fill="#121216" stroke="#2a2a38" stroke-width="3"/>
+    
+    <!-- Vinyl Grooves -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#1f1f2a" stroke-width="1.5" stroke-dasharray="8 4"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#252533" stroke-width="1.2" stroke-dasharray="12 6"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#1c1c26" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#2a2a3a" stroke-width="1"/>
+    
+    <!-- Center Label -->
+    <circle cx="0" cy="0" r="18" fill="#FF007F" filter="url(#glow-pink)"/>
+    <circle cx="0" cy="0" r="14" fill="#0D0D11"/>
+    <circle cx="0" cy="0" r="5" fill="#CCFF00" filter="url(#glow-yellow)"/>
+    <circle cx="0" cy="0" r="2" fill="#000"/>
+
+    <!-- Kinetic Geometrics on Vinyl -->
+    <polygon points="-8,-8 8,-8 0,6" fill="#00E5FF" opacity="0.85"/>
+
+    <!-- Tonearm & Cartridge Needle -->
+    <path d="M 38 -45 L 20 -15 L 10 -4" fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" filter="url(#glow-cyan)"/>
+    <!-- Cartridge Head -->
+    <rect x="7" y="-6" width="6" height="5" fill="#CCFF00" transform="rotate(30 10 -4)" filter="url(#glow-yellow)"/>
+    <!-- Pivot Base -->
+    <circle cx="38" cy="-45" r="7" fill="#1e1e28" stroke="#00E5FF" stroke-width="2"/>
+    <circle cx="38" cy="-45" r="3" fill="#CCFF00"/>
+  </g>
+
+  <!-- Typography: DJ G-SUB & SOULCRAFT -->
+  <g transform="translate(130, 48)">
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-size="34" font-weight="900" letter-spacing="2" fill="#CCFF00" filter="url(#glow-yellow)">
+      DJ G-SUB
+    </text>
+    <text x="0" y="28" font-family="'Courier New', monospace" font-size="14" font-weight="700" letter-spacing="4" fill="#00E5FF" filter="url(#glow-cyan)">
+      SOULCRAFT
+    </text>
+    <text x="130" y="28" font-family="'Courier New', monospace" font-size="10" font-weight="600" letter-spacing="2" fill="#FF007F">
+      // 90s CHICAGO &amp; DETROIT
+    </text>
+
+    <!-- Kinetic geometric accents -->
+    <polygon points="215, -15 225, -28 235, -15" fill="#FF007F" opacity="0.9"/>
+    <rect x="238" y="-26" width="10" height="10" fill="#00E5FF" transform="rotate(45 243 -21)"/>
+    <circle cx="260" cy="-21" r="5" fill="#CCFF00"/>
+  </g>
+</svg>

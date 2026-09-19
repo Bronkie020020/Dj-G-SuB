@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ G-SUB &amp; SOULCRAFT HUB | 90s Underground House &amp; AI Prompt Generator</title>
+  <meta name="description" content="DJ G-SUB & SOULCRAFT platform: 90s Chicago/Detroit underground house content hub, DDJ-FLX4 DJ stappenplan, SoundCloud mix streams en DSPy-gebaseerde AI Prompt Generator.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header with 90s Underground Branding -->
+    <header class="header-top">
+      <div class="brand-wrapper">
+        <img src="assets/logo.svg" alt="DJ G-SUB &amp; SOULCRAFT Vinyl Logo" class="logo-img">
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-chicago">CHICAGO HOUSE</span>
+        <span class="badge badge-detroit">DETROIT TECHNO</span>
+        <span class="badge badge-vinyl">12" VINYL ONLY</span>
+      </div>
+    </header>
+
+    <!-- Neon Hero Banner -->
+    <section class="neon-banner">
+      <div>
+        <h1 class="banner-title">
+          <span>🎛️</span> 90s UNDERGROUND HOUSE &amp; AI PROMPT STUDIO
+        </h1>
+        <p class="banner-tagline">Authentieke Chicago &amp; Detroit warehouse vibes gekoppeld aan de 4-laagse DSPy AI Prompt Generator Engine.</p>
+      </div>
+      <div class="banner-actions">
+        <a href="https://www.sneakerartyfarty.nl" target="_blank" rel="noopener noreferrer" class="badge badge-chicago" style="text-decoration:none;">
+          👟 SNEAKER ARTY FARTY PARTNER
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Dashboard Grid: Module A & Module B -->
+    <main class="dashboard-grid">
+
+      <!-- =======================================================
+           MODULE A: DJ STAPPENPLAN & CONTENT HUB
+           ======================================================= -->
+      <section class="module-card">
+        <div class="module-header mod-a">
+          <h2 class="module-title cyan">
+            <span>💿</span> MODULE A: DJ STAPPENPLAN &amp; CONTENT HUB
+          </h2>
+          <span class="badge badge-detroit">SOULCRAFT AUDIO</span>
+        </div>
+
+        <div class="module-body">
+          <!-- 1200 MK2 Turntable & Audio Player Deck -->
+          <div class="turntable-deck">
+            <!-- Vinyl Platter -->
+            <div class="vinyl-container">
+              <div class="vinyl-disc" id="vinylDisc">
+                <div class="vinyl-center-label">
+                  G-SUB<br>33 RPM
+                </div>
+                <div class="vinyl-spindle"></div>
+              </div>
+              <!-- Tonearm -->
+              <div class="tonearm" id="tonearm">
+                <div class="tonearm-head"></div>
+              </div>
+            </div>
+
+            <!-- Player Info & Controls -->
+            <div class="player-controls-wrapper">
+              <div class="track-now-playing">
+                <div>
+                  <div class="track-title-label" id="nowPlayingTitle">Hardgroove Sessions #01</div>
+                  <span class="track-genre-pill" id="nowPlayingGenre">Hardgroove</span>
+                </div>
+                <div class="bpm-counter" id="nowPlayingBpm">142 BPM</div>
+              </div>
+
+              <!-- Audio LED Meters -->
+              <div class="audio-meters">
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+                <div class="meter-bar"></div>
+              </div>
+
+              <!-- Playback Buttons -->
+              <div class="playback-buttons">
+                <button class="btn-play" id="playBtn">
+                  <span>▶</span> AFSPELEN
+                </button>
+                <button class="btn-icon" id="nextBtn" title="Volgende track">⏭</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Genre Filter Tabs -->
+          <div>
+            <div class="genre-tabs">
+              <button class="genre-tab active" data-genre="All">Alle Genres</button>
+              <button class="genre-tab" data-genre="Chicago House">Chicago House</button>
+              <button class="genre-tab" data-genre="Hardgroove">Hardgroove</button>
+              <button class="genre-tab" data-genre="Melodic Techno">Melodic Techno</button>
+              <button class="genre-tab" data-genre="Afro House">Afro House</button>
+              <button class="genre-tab" data-genre="Industrial Techno">Industrial</button>
+            </div>
+          </div>
+
+          <!-- SOULCRAFT Mixes & Streams List -->
+          <div class="tracks-list" id="tracksList">
+            <!-- Dynamically populated via JS -->
+          </div>
+
+          <!-- DJ Stappenplan & Milestones Checklist -->
+          <div class="milestones-section">
+            <div class="section-subtitle">
+              <span>🎯 DJ STAPPENPLAN &amp; GEAR MIJLPALEN</span>
+              <span style="font-size:0.75rem; color:var(--neon-yellow);">PIONEER DDJ-FLX4 &amp; REKORDBOX</span>
+            </div>
+            <div class="milestones-list" id="milestonesList">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Gigs & Netwerk Contacten -->
+          <div class="events-section">
+            <div class="section-subtitle">
+              <span>📅 OPTREDENS &amp; NETWERK BEHEER</span>
+              <button class="badge badge-vinyl" id="btnOpenGigModal" style="cursor:pointer; border:none;">+ GIG TOEVOEGEN</button>
+            </div>
+            <div class="events-list" id="eventsList">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           MODULE B: AI PROMPT GENERATOR ENGINE
+           ======================================================= -->
+      <section class="module-card">
+        <div class="module-header mod-b">
+          <h2 class="module-title pink">
+            <span>⚡</span> MODULE B: AI PROMPT GENERATOR ENGINE
+          </h2>
+          <span class="badge badge-chicago">4-LAAGS ARCHITECTUUR</span>
+        </div>
+
+        <div class="module-body">
+          <!-- 4-Layer Architecture Progress Visualizer -->
+          <div class="layers-visualizer">
+            <div class="layer-step" id="layer1"><span class="layer-dot"></span> 1. Meta-Prompt</div>
+            <div class="layer-step" id="layer2"><span class="layer-dot"></span> 2. Vector Retrieval</div>
+            <div class="layer-step" id="layer3"><span class="layer-dot"></span> 3. DSPy Bootstrap</div>
+            <div class="layer-step" id="layer4"><span class="layer-dot"></span> 4. Guardrails</div>
+          </div>
+
+          <!-- Prompt Form -->
+          <div class="prompt-form">
+            <div class="form-group">
+              <label class="form-label" for="promptInput">
+                <span>Ruw Gebruikersidee / Concept:</span>
+                <span style="color:var(--neon-yellow); font-size:0.75rem;">UNDERGROUND SELECTOR FOCUS</span>
+              </label>
+              <textarea 
+                id="promptInput" 
+                class="prompt-textarea" 
+                placeholder="Bijv. Maak een promotietekst voor mijn nieuwe Chicago House mix op SoundCloud..."></textarea>
+            </div>
+
+            <!-- Quick Suggestion Chips -->
+            <div class="suggestions-chips">
+              <span class="chip" data-prompt="Maak een promotietekst voor mijn nieuwe Chicago House mix op SoundCloud">🎵 Chicago Promo</span>
+              <span class="chip" data-prompt="Genereer een Midjourney prompt voor artwork van een 90s Detroit techno 12-inch vinyl sleeve">🎨 90s Vinyl Artwork</span>
+              <span class="chip" data-prompt="Bouw een tracklist met EQ overgangsnotities voor een Hardgroove set op de DDJ-FLX4">🎛️ FLX4 Tracklist &amp; EQ</span>
+              <span class="chip" data-prompt="Schrijf een professionele maar authentieke boeking pitch naar een underground club in Rotterdam">✉️ Club Booker Pitch</span>
+            </div>
+
+            <!-- Target Model Selector -->
+            <div class="form-group">
+              <label class="form-label">Selecteer Doelmodel (Model-Specifieke Tailoring):</label>
+              <div class="model-selector-group">
+                <label class="model-option active">
+                  <input type="radio" name="targetModel" value="GPT-4o" checked>
+                  <div>
+                    <div class="model-name">GPT-4o</div>
+                    <div class="model-badge">Markdown / Role Framing</div>
+                  </div>
+                </label>
+
+                <label class="model-option">
+                  <input type="radio" name="targetModel" value="Claude 3.5 Sonnet">
+                  <div>
+                    <div class="model-name">Claude 3.5 Sonnet</div>
+                    <div class="model-badge">Gestructureerde XML Tags</div>
+                  </div>
+                </label>
+
+                <label class="model-option">
+                  <input type="radio" name="targetModel" value="Llama 3">
+                  <div>
+                    <div class="model-name">Llama 3</div>
+                    <div class="model-badge">Special Tokens Format</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="btn-generate" id="btnGenerate">
+              <span>⚡</span> OPTIMALISEER PROMPT
+            </button>
+          </div>
+
+          <!-- Prompt Output Box -->
+          <div class="prompt-output-box">
+            <div class="output-header">
+              <div class="output-title">
+                <span>✦</span> GEOPTIMALISEERDE PROMPT OUTPUT
+              </div>
+              <span class="badge badge-vinyl" style="font-size:0.65rem;">DSPY VALIDATED</span>
+            </div>
+
+            <pre class="output-content" id="promptOutput">// Typ hierboven een idee of klik op een van de suggesties en druk op 'Optimaliseer Prompt'.</pre>
+
+            <!-- Dynamic Variables Live Substituter -->
+            <div class="variables-container" id="variablesContainer" style="display:none;">
+              <div class="variables-title">⚡ Gedetecteerde Variabelen (Vul direct in):</div>
+              <div class="variable-inputs-grid" id="variableInputsGrid">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+            <!-- Output Action Toolbar -->
+            <div class="output-actions">
+              <button class="btn-action copy" id="btnCopy">
+                <span>📋</span> KOPIEER PROMPT
+              </button>
+            </div>
+
+            <!-- DSPy Feedback & Iteration Box -->
+            <div style="padding: 0 1rem 1rem 1rem;">
+              <div class="feedback-box">
+                <input 
+                  type="text" 
+                  id="feedbackInput" 
+                  class="feedback-input" 
+                  placeholder="Voer verfijningsfeedback in (bijv. 'maak het nog rauwer en voeg vinyl kraak toe')...">
+                <button class="btn-action optimize" id="btnOptimize">
+                  HEROPTIMALISEER
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Cross-over Showcase: Sneaker Arty Farty Studio -->
+    <section class="partner-store-card">
+      <div class="partner-info">
+        <div class="partner-badge">EXCLUSIEVE STUDIO CROSS-OVER</div>
+        <h2 class="partner-title">SNEAKER ARTY FARTY x DJ G-SUB</h2>
+        <p class="partner-desc">
+          Geïnspireerd op de underground clubcultuur van Chicago en Detroit. Handgeschilderde, custom sneakers ontworpen voor lange nachten in de DJ booth en op de dansvloer. Neon accenten (#CCFF00 &amp; #FF007F), industriële esthetiek en hoogwaardige afwerking.
+        </p>
+      </div>
+      <a href="https://www.sneakerartyfarty.nl" target="_blank" rel="noopener noreferrer" class="btn-shop">
+        BEKIJK WEBSHOP &amp; COLLECTIE ↗
+      </a>
+    </section>
+
+  </div>
+
+  <!-- Modal: Nieuwe Gig Toevoegen -->
+  <div class="modal-overlay" id="newGigModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">NIEUWE GIG / OPTREDEN TOEVOEGEN</h3>
+        <button class="modal-close" id="btnCloseGigModal">&times;</button>
+      </div>
+      <form id="newGigForm">
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label class="form-label">Locatie / Club Naam:</label>
+          <input type="text" name="venue_name" class="prompt-textarea" style="min-height:38px;" required placeholder="Bijv. Warehouse Club 909">
+        </div>
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label class="form-label">Stad:</label>
+          <input type="text" name="city" class="prompt-textarea" style="min-height:38px;" placeholder="Bijv. Amsterdam">
+        </div>
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label class="form-label">Datum:</label>
+          <input type="date" name="date" class="prompt-textarea" style="min-height:38px;">
+        </div>
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label class="form-label">Genre / Concept:</label>
+          <input type="text" name="genre" class="prompt-textarea" style="min-height:38px;" placeholder="Bijv. Chicago House &amp; Jackin'">
+        </div>
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label class="form-label">Contactgegevens (Programmeur / Host):</label>
+          <input type="text" name="contacts" class="prompt-textarea" style="min-height:38px;" placeholder="Naam &amp; E-mail / Telefoon">
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label class="form-label">Status:</label>
+          <select name="status" class="prompt-textarea" style="min-height:38px;">
+            <option value="In optie">In optie</option>
+            <option value="Bevestigd">Bevestigd</option>
+            <option value="Voorbereiding">Voorbereiding</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-generate" style="width:100%;">
+          OPSLAAN IN DATAMODEL
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

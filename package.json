@@ -1,0 +1,29 @@
+{
+  "name": "dj-gsub-soulcraft",
+  "version": "1.0.0",
+  "description": "DJ G-SUB & SOULCRAFT Hub & AI Prompt Generator",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build": "echo Production build complete"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "dj-gsub",
+    "soulcraft",
+    "chicago-house",
+    "detroit-techno",
+    "ai-prompt-generator",
+    "dspy"
+  ],
+  "author": "DJ G-SUB",
+  "license": "ISC"
+}

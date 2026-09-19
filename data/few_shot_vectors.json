@@ -1,0 +1,52 @@
+[
+  {
+    "id": "fs-1",
+    "domain": "dj_promo",
+    "keywords": ["promotie", "promo", "chicago", "house", "mix", "soundcloud", "club", "release", "set"],
+    "example_input": "Promoot mijn Chicago House underground mix voor SoundCloud",
+    "meta_role": "Underground Nightlife Curator & Vinyl Specialist",
+    "context_focus": "Warehouse atmosphere, analog warmth, 90s Chicago jackin grooves, vinyl authenticity",
+    "constraints": ["Vermijd generieke pop/EDM termen", "Gebruik rauwe warehouse club terminologie", "Formuleer sterke call-to-action naar luisteraars"],
+    "default_variables": ["{{mix_naam}}", "{{locatie}}", "{{dj_naam}}", "{{release_datum}}"]
+  },
+  {
+    "id": "fs-2",
+    "domain": "artwork_generation",
+    "keywords": ["artwork", "cover", "midjourney", "imagen", "visual", "plaat", "vinyl", "afbeelding", "design"],
+    "example_input": "Genereer een Midjourney / Imagen prompt voor artwork van een 90s Detroit techno release",
+    "meta_role": "Visual Art Director & 90s Acid / Techno Graphic Specialist",
+    "context_focus": "Dark industrial architecture, kinetic neon typography, vintage 12-inch vinyl sleeve, brutalist textures",
+    "constraints": ["Specificeer camera angles, belichting en aspect ratio (bijv. --ar 1:1)", "No text rendering artifacts, focus on atmosphere", "Include neon cyan and magenta accents"],
+    "default_variables": ["{{subgenre}}", "{{thema}}", "{{kleurencombinatie}}"]
+  },
+  {
+    "id": "fs-3",
+    "domain": "dj_curation_tracklist",
+    "keywords": ["tracklist", "curatie", "overgang", "beatmatching", "phrasing", "eq", "selectie", "genres"],
+    "example_input": "Bouw een 1-uur durende Hardgroove naar Industrial Techno tracklist met transitie notities",
+    "meta_role": "Elite Club Resident & Audio Engineering Mentor",
+    "context_focus": "Energy curve progression, harmonic mixing (Camelot wheel), BPM stepping (138 -> 146 BPM), EQ frequency carving",
+    "constraints": ["Geef per track de cue points en mix-in/mix-out maten aan", "Benoem de EQ balans (highs, mids, bass swaps)"],
+    "default_variables": ["{{start_bpm}}", "{{eind_bpm}}", "{{aantal_tracks}}"]
+  },
+  {
+    "id": "fs-4",
+    "domain": "gig_pitch",
+    "keywords": ["boeking", "pitch", "club", "zaaleigenaar", "promotor", "gig", "evenement", "contract", "bio"],
+    "example_input": "Schrijf een professionele maar authentieke boeking pitch naar een zaaleigenaar van een underground club",
+    "meta_role": "Artist Manager & Tour Booking Director",
+    "context_focus": "Community building, dancefloor retention, technical versatility on Pioneer gear, previous crowd engagement",
+    "constraints": ["Kort, krachtig en to-the-point", "Inclusief SoundCloud link placeholder en technische rider vereisten"],
+    "default_variables": ["{{venue_naam}}", "{{programmeur_naam}}", "{{sound_stijl}}", "{{beschikbare_data}}"]
+  },
+  {
+    "id": "fs-5",
+    "domain": "sneaker_crossover",
+    "keywords": ["sneaker", "merch", "arty farty", "fashion", "streetwear", "custom", "lifestyle"],
+    "example_input": "Ontwerp een cross-over campagne tussen SOULCRAFT en Sneaker Arty Farty custom sneakers",
+    "meta_role": "Streetwear Brand Strategist & Underground Culture Advocate",
+    "context_focus": "Hand-painted 90s aesthetic, neon colorways (#CCFF00, #FF007F, #00E5FF), dancefloor durability, DJ booth signature style",
+    "constraints": ["Koppel de kicks direct aan clubcultuur en vinyl collecties", "Zorg voor subtiele branding zonder corporate look"],
+    "default_variables": ["{{sneaker_model}}", "{{drop_datum}}", "{{beperkte_oplage}}"]
+  }
+]

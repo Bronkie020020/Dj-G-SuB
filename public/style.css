@@ -1,0 +1,1194 @@
+/* ==========================================================================
+   DJ G-SUB & SOULCRAFT - 90s Underground House / Chicago & Detroit Theme
+   ========================================================================== */
+
+:root {
+  --neon-yellow: #CCFF00;
+  --neon-pink: #FF007F;
+  --neon-cyan: #00E5FF;
+  --bg-dark: #0A0A0F;
+  --bg-surface: #13131D;
+  --bg-card: #181826;
+  --bg-card-hover: #212133;
+  --border-subtle: #2A2A3D;
+  --border-highlight: #3D3D58;
+  --text-primary: #F0F0FF;
+  --text-secondary: #9B9BB5;
+  --text-muted: #64647D;
+  
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-display: 'Impact', 'Arial Black', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-neon-yellow: 0 0 15px rgba(204, 255, 0, 0.35);
+  --shadow-neon-pink: 0 0 15px rgba(255, 0, 127, 0.35);
+  --shadow-neon-cyan: 0 0 15px rgba(0, 229, 255, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle 90s CRT Scanline & Grid Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 255, 0, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------
+   HEADER & NEON BRANDING
+   ------------------------------------------------------------- */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--border-subtle);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.logo-img {
+  height: 64px;
+  width: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
+}
+
+.header-badges {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-chicago {
+  background: rgba(255, 0, 127, 0.15);
+  border: 1px solid var(--neon-pink);
+  color: var(--neon-pink);
+  box-shadow: var(--shadow-neon-pink);
+}
+
+.badge-detroit {
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.badge-vinyl {
+  background: rgba(204, 255, 0, 0.15);
+  border: 1px solid var(--neon-yellow);
+  color: var(--neon-yellow);
+  box-shadow: var(--shadow-neon-yellow);
+}
+
+/* -------------------------------------------------------------
+   BANNER: 90s Underground House Vibe
+   ------------------------------------------------------------- */
+.neon-banner {
+  background: linear-gradient(135deg, rgba(24, 24, 38, 0.9), rgba(15, 15, 23, 0.95));
+  border: 1px solid var(--neon-yellow);
+  border-left: 6px solid var(--neon-yellow);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(204, 255, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.banner-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 1.5px;
+  color: var(--neon-yellow);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banner-tagline {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* -------------------------------------------------------------
+   DASHBOARD GRID LAYOUT (Module A & Module B)
+   ------------------------------------------------------------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.module-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.module-header {
+  padding: 1.25rem 1.5rem;
+  background: rgba(24, 24, 38, 0.8);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-header.mod-a {
+  border-top: 3px solid var(--neon-cyan);
+}
+
+.module-header.mod-b {
+  border-top: 3px solid var(--neon-pink);
+}
+
+.module-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.module-title.cyan {
+  color: var(--neon-cyan);
+}
+
+.module-title.pink {
+  color: var(--neon-pink);
+}
+
+.module-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+/* -------------------------------------------------------------
+   TURNTABLE & AUDIO PLAYER WIDGET
+   ------------------------------------------------------------- */
+.turntable-deck {
+  background: #0E0E14;
+  border: 2px solid var(--border-highlight);
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.turntable-deck::after {
+  content: "1200 MK2 TURNTABLE // DIRECT DRIVE";
+  position: absolute;
+  bottom: 6px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Spinning Vinyl Disc */
+.vinyl-container {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #252535 0%, #15151F 30%, #0D0D11 70%, #000 100%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #333348;
+}
+
+.vinyl-disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.vinyl-disc.spinning {
+  animation: spinVinyl 2.4s linear infinite;
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-center-label {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--neon-pink);
+  box-shadow: var(--shadow-neon-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 0.55rem;
+  text-align: center;
+}
+
+.vinyl-spindle {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-yellow);
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Tonearm */
+.tonearm {
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  width: 35px;
+  height: 70px;
+  border-right: 3px solid var(--neon-cyan);
+  border-bottom: 3px solid var(--neon-cyan);
+  border-bottom-right-radius: 12px;
+  transform-origin: top right;
+  transform: rotate(-25deg);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tonearm.engaged {
+  transform: rotate(6deg);
+  filter: drop-shadow(0 0 6px var(--neon-cyan));
+}
+
+.tonearm-head {
+  position: absolute;
+  bottom: -4px;
+  left: -6px;
+  width: 10px;
+  height: 6px;
+  background: var(--neon-yellow);
+  border-radius: 2px;
+}
+
+/* Player Info & Controls */
+.player-controls-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.track-now-playing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.track-title-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--neon-yellow);
+  letter-spacing: 0.5px;
+}
+
+.track-genre-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  border-radius: 4px;
+}
+
+.audio-meters {
+  display: flex;
+  gap: 4px;
+  height: 18px;
+  align-items: flex-end;
+  background: #08080C;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid #222230;
+}
+
+.meter-bar {
+  flex: 1;
+  background: #333348;
+  height: 20%;
+  border-radius: 1px;
+  transition: height 0.1s ease;
+}
+
+.meter-bar.active {
+  background: linear-gradient(to top, var(--neon-yellow) 0%, var(--neon-cyan) 70%, var(--neon-pink) 100%);
+}
+
+.playback-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-play {
+  background: var(--neon-yellow);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: var(--shadow-neon-yellow);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-play:hover {
+  transform: scale(1.04);
+  background: #e0ff40;
+}
+
+.btn-icon {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.bpm-counter {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+/* -------------------------------------------------------------
+   TRACKS LIST & GENRE FILTER TABS
+   ------------------------------------------------------------- */
+.genre-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+}
+
+.genre-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.genre-tab:hover {
+  border-color: var(--neon-cyan);
+  color: var(--text-primary);
+}
+
+.genre-tab.active {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.track-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.track-item:hover {
+  border-color: var(--neon-yellow);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.track-item.current {
+  border-color: var(--neon-pink);
+  background: rgba(255, 0, 127, 0.08);
+}
+
+.track-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.track-item-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.track-item-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.track-play-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.track-play-btn:hover {
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+/* -------------------------------------------------------------
+   MILESTONES & DJ TRAINING CHECKLIST
+   ------------------------------------------------------------- */
+.milestones-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.milestone-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.milestone-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid var(--border-highlight);
+  border-radius: 4px;
+  background: #0E0E14;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2px;
+  transition: all 0.2s;
+}
+
+.milestone-checkbox:checked {
+  background: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  box-shadow: var(--shadow-neon-yellow);
+}
+
+.milestone-checkbox:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 13px;
+  color: #000;
+  font-weight: 900;
+}
+
+.milestone-content {
+  flex: 1;
+}
+
+.milestone-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.milestone-item.done .milestone-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.milestone-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* -------------------------------------------------------------
+   EVENTS & GIGS MANAGER
+   ------------------------------------------------------------- */
+.events-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.event-card {
+  background: #11111A;
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--neon-pink);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-venue {
+  font-weight: 700;
+  color: var(--neon-pink);
+  font-size: 0.9rem;
+}
+
+.event-details {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.event-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(204, 255, 0, 0.1);
+  color: var(--neon-yellow);
+  border: 1px solid var(--neon-yellow);
+}
+
+/* -------------------------------------------------------------
+   MODULE B: AI PROMPT GENERATOR ENGINE
+   ------------------------------------------------------------- */
+.prompt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prompt-textarea {
+  background: #0E0E16;
+  border: 1px solid var(--border-highlight);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 90px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.prompt-textarea:focus {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.25);
+}
+
+/* Suggestion chips */
+.suggestions-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--neon-yellow);
+  color: var(--neon-yellow);
+}
+
+/* Model Selector Radios */
+.model-selector-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.model-option {
+  flex: 1;
+  min-width: 120px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.model-option input[type="radio"] {
+  accent-color: var(--neon-pink);
+}
+
+.model-option:hover {
+  border-color: var(--border-highlight);
+}
+
+.model-option.active {
+  border-color: var(--neon-pink);
+  background: rgba(255, 0, 127, 0.08);
+  box-shadow: var(--shadow-neon-pink);
+}
+
+.model-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.model-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+/* 4-Layer Architecture Visualizer Banner */
+.layers-visualizer {
+  background: #0D0D14;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.layer-step {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.layer-step.active {
+  color: var(--neon-cyan);
+}
+
+.layer-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.layer-step.active .layer-dot {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 6px var(--neon-cyan);
+}
+
+/* Primary Action Buttons */
+.btn-generate {
+  background: linear-gradient(135deg, var(--neon-pink), #c70062);
+  color: #FFF;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-neon-pink);
+  transition: all 0.2s ease;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+/* Output Area */
+.prompt-output-box {
+  background: #0B0B11;
+  border: 1px solid var(--border-highlight);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-header {
+  background: #14141E;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.output-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--neon-yellow);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.output-content {
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #D6D6E8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 280px;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+/* Variables Live Substitution Widget */
+.variables-container {
+  background: #12121B;
+  border-top: 1px solid var(--border-subtle);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.variables-title {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+}
+
+.variable-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+}
+
+.var-input-item input {
+  width: 100%;
+  background: #08080C;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+  color: #FFF;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+.var-input-item input:focus {
+  border-color: var(--neon-cyan);
+}
+
+/* Output actions toolbar */
+.output-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #11111A;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.btn-action {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+}
+
+.btn-action.copy {
+  border-color: var(--neon-yellow);
+  color: var(--neon-yellow);
+}
+
+.btn-action.copy:hover {
+  background: var(--neon-yellow);
+  color: #000;
+}
+
+.btn-action.optimize {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn-action.optimize:hover {
+  background: var(--neon-cyan);
+  color: #000;
+}
+
+/* Feedback drawer */
+.feedback-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.feedback-input {
+  flex: 1;
+  background: #08080C;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  color: #FFF;
+  font-size: 0.8rem;
+}
+
+/* -------------------------------------------------------------
+   FEATURED STORE: SNEAKER ARTY FARTY CROSSOVER
+   ------------------------------------------------------------- */
+.partner-store-card {
+  background: linear-gradient(135deg, #161624, #0F0F17);
+  border: 1px solid var(--border-highlight);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.partner-store-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--neon-yellow), var(--neon-pink), var(--neon-cyan));
+}
+
+.partner-info {
+  max-width: 700px;
+}
+
+.partner-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--neon-yellow);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.partner-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #FFF;
+  margin-bottom: 0.5rem;
+}
+
+.partner-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-shop {
+  background: var(--neon-cyan);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow-neon-cyan);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-shop:hover {
+  transform: scale(1.05);
+  background: #40f0ff;
+}
+
+/* -------------------------------------------------------------
+   TOAST NOTIFICATION
+   ------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  background: #191928;
+  border: 1px solid var(--neon-yellow);
+  color: #FFF;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), var(--shadow-neon-yellow);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  animation: slideToast 0.3s ease;
+}
+
+@keyframes slideToast {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* -------------------------------------------------------------
+   MODAL: NIEUWE GIG TOEVOEGEN
+   ------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.modal-overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.3);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--neon-pink);
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #FFF;
+}
+
+/* -------------------------------------------------------------
+   CUSTOM SCROLLBAR
+   ------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D2D44;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+}

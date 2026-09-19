@@ -1,0 +1,163 @@
+{
+  "branding": {
+    "brand_name": "DJ G-SUB & SOULCRAFT",
+    "visual_style": "90s Chicago & Detroit Underground House / Vinyl & Turntable Aesthetics",
+    "webshop_url": "https://www.sneakerartyfarty.nl",
+    "partner_name": "Sneaker Arty Farty",
+    "colors": {
+      "neon_yellow": "#CCFF00",
+      "magenta_pink": "#FF007F",
+      "cyan_blue": "#00E5FF",
+      "charcoal_black": "#0D0D11",
+      "surface_dark": "#16161F",
+      "surface_border": "#282838"
+    }
+  },
+  "tracks": [
+    {
+      "id": "trk-1",
+      "title": "Hardgroove Sessions #01",
+      "genre": "Hardgroove",
+      "platform_url": "https://soundcloud.com/soulcraft/hardgroove-sessions-01",
+      "bpm": 142,
+      "duration": "58:45",
+      "vibe": "Relentless rolling percussion, Chicago energy and 90s warehouse grooves",
+      "audio_stream_url": "https://cdn.freesound.org/previews/563/563962_6142149-lq.mp3"
+    },
+    {
+      "id": "trk-2",
+      "title": "Golden Horizon",
+      "genre": "Melodic Techno",
+      "platform_url": "https://soundcloud.com/soulcraft/golden-horizon",
+      "bpm": 126,
+      "duration": "1:04:12",
+      "vibe": "Warm analog pads, deep basslines and euphoric sunrise progression",
+      "audio_stream_url": "https://cdn.freesound.org/previews/467/467776_9883582-lq.mp3"
+    },
+    {
+      "id": "trk-3",
+      "title": "The Jacking Warehouse",
+      "genre": "Chicago House",
+      "platform_url": "https://soundcloud.com/soulcraft/the-jacking-warehouse",
+      "bpm": 128,
+      "duration": "1:12:30",
+      "vibe": "Raw 909 drums, swinging hi-hats and hypnotic vocal hooks straight from Chicago",
+      "audio_stream_url": "https://cdn.freesound.org/previews/557/557815_11861866-lq.mp3"
+    },
+    {
+      "id": "trk-4",
+      "title": "Pure Euphoria",
+      "genre": "Afro House",
+      "platform_url": "https://soundcloud.com/soulcraft/pure-euphoria",
+      "bpm": 122,
+      "duration": "49:18",
+      "vibe": "Organic djembe rhythms, atmospheric chants and deep soulful sub-bass",
+      "audio_stream_url": "https://cdn.freesound.org/previews/389/389658_7255533-lq.mp3"
+    },
+    {
+      "id": "trk-5",
+      "title": "Industrial Noise Session 02",
+      "genre": "Industrial Techno",
+      "platform_url": "https://soundcloud.com/soulcraft/industrial-noise-session-02",
+      "bpm": 146,
+      "duration": "1:01:20",
+      "vibe": "Distorted kick rumbles, metallic percussion and dark underground warehouse grit",
+      "audio_stream_url": "https://cdn.freesound.org/previews/512/512967_11195610-lq.mp3"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "ms-1",
+      "title": "Gear Setup & Pioneer DDJ-FLX4 Verbinding",
+      "category": "Gear & Hardware",
+      "description": "Sluit de DDJ-FLX4 aan via USB-C, configureer master out en hoofdtelefoon cueing op kanaal 1/2.",
+      "completed": true
+    },
+    {
+      "id": "ms-2",
+      "title": "Rekordbox & Serato Bibliotheek Beheer",
+      "category": "Software",
+      "description": "Analyseer track BPM, zet juiste beatgrids en organiseer playlists per subgenre.",
+      "completed": true
+    },
+    {
+      "id": "ms-3",
+      "title": "Handmatig Beatmatchen Zonder Sync",
+      "category": "Techniek",
+      "description": "Gebruik pitch fader en jogwheel om 2 tracks op gelijk tempo en fase te vergrendelen.",
+      "completed": false
+    },
+    {
+      "id": "ms-4",
+      "title": "Phrasing & Maatstructuren (32-beat Blocks)",
+      "category": "Muzikaliteit",
+      "description": "Start overgangen exact op de eerste tel van een 16- of 32-beat phrase om breakdowns te synchroniseren.",
+      "completed": false
+    },
+    {
+      "id": "ms-5",
+      "title": "3-Band EQ Overgangen & Bass Swap",
+      "category": "Mixtechniek",
+      "description": "Voer schone frequentieverschuivingen uit: verlaag Low EQ op deck A bij het invoeren van de kick op deck B.",
+      "completed": false
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-1",
+      "venue_name": "Warehouse Club 909",
+      "city": "Amsterdam",
+      "date": "2026-10-24",
+      "genre": "Chicago House & Jackin'",
+      "contacts": "Marc (Programmeur / Bookings) - booking@warehouse909.nl",
+      "status": "Bevestigd"
+    },
+    {
+      "id": "evt-2",
+      "venue_name": "Subterranean Vault",
+      "city": "Rotterdam",
+      "date": "2026-11-14",
+      "genre": "Hardgroove & Detroit Techno",
+      "contacts": "Ellen (Resident DJ & Host) - +31 6 12345678",
+      "status": "In optie"
+    },
+    {
+      "id": "evt-3",
+      "venue_name": "De Machinekamer",
+      "city": "Eindhoven",
+      "date": "2026-12-05",
+      "genre": "Industrial Techno",
+      "contacts": "Daan (Locatiemanager) - daan@machinekamer-club.nl",
+      "status": "Voorbereiding"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "pmt-mu8maqdbloxc",
+      "user_idea": "Maak een promotietekst voor mijn nieuwe Chicago House mix",
+      "optimized_prompt": "<system>\nJe bent een Underground Nightlife Curator & Vinyl Specialist met diepe wortels in de underground house- en technocultuur van Chicago en Detroit.\n</system>\n\n<context>\nWarehouse atmosphere, analog warmth, 90s Chicago jackin grooves, vinyl authenticity.\nDoel van de opdracht: Vertaal het concept \"Maak een promotietekst voor mijn nieuwe Chicago House mix\" naar een krachtige output conform underground selector standaarden.\nToegepaste feedbackverfijning: Maak de vinyl focus nog intenser\n</context>\n\n<instructions>\n1. Vermijd generieke pop/EDM termen\n2. Gebruik rauwe warehouse club terminologie\n3. Formuleer sterke call-to-action naar luisteraars\n4. Behoud altijd de rauwe esthetiek van analoge synthesizers, TR-909 percussie en authentieke vinyl cultuur.\n</instructions>\n\n<variables>\n- {{mix_naam}}: Vul hier de specifieke projectwaarde in\n- {{locatie}}: Vul hier de specifieke projectwaarde in\n- {{dj_naam}}: Vul hier de specifieke projectwaarde in\n- {{release_datum}}: Vul hier de specifieke projectwaarde in\n</variables>\n\n<output_format>\n- Kinetische Headline / Hook\n- Kernboodschap & Contextuele Uitwerking\n- Call-to-Action & Relevant Platform Distributie Template\n</output_format>",
+      "target_model": "Claude 3.5 Sonnet",
+      "variables": [
+        "{{mix_naam}}",
+        "{{locatie}}",
+        "{{dj_naam}}",
+        "{{release_datum}}"
+      ],
+      "created_at": "2026-09-19T16:44:21.887Z",
+      "last_feedback": "Maak de vinyl focus nog intenser",
+      "updated_at": "2026-09-19T16:44:21.918Z"
+    },
+    {
+      "id": "pmt-sample-1",
+      "user_idea": "Maak een promotietekst voor mijn nieuwe Chicago House mix",
+      "target_model": "Claude 3.5 Sonnet",
+      "optimized_prompt": "<system>\nJe bent een legendarische 90s underground club curator en senior copywriter gespecialiseerd in Chicago & Detroit house cultuur.\n</system>\n\n<context>\nJe promoot een exclusieve set voor underground selectors en dansvloer puristen. De sound ademt rauwe Roland TR-909 kicks, zwoele baslijnen en kinetische vinyl energie.\n</context>\n\n<instructions>\n1. Schrijf een opzwepende promo met een authentieke underground toon (geen commerciële clichés).\n2. Gebruik krachtige zinnen die het gevoel van een zweterige warehouse dansvloer oproepen.\n3. Integreer duidelijke call-to-actions voor SoundCloud streaming en liveshows.\n</instructions>\n\n<variables>\n- Mix Titel: {{mix_titel}}\n- Release Datum / Locatie: {{release_locatie}}\n- Belangrijkste Track / Highlight: {{highlight_track}}\n</variables>\n\n<output_format>\n- Catchy Headline (Underground Club Style)\n- Sfeerimpressie (max 3 alinea's)\n- Tracklist Highlight & DJ Bio snapshot\n- Directe streaming link container\n</output_format>",
+      "variables": [
+        "{{mix_titel}}",
+        "{{release_locatie}}",
+        "{{highlight_track}}"
+      ],
+      "created_at": "2026-09-19T18:00:00.000Z"
+    }
+  ]
+}
