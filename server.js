@@ -447,12 +447,34 @@ app.post('/graphql', (req, res) => {
     });
   }
 
+  // Fallback default GraphQL response
+  return res.json({
+    data: {
+      message: 'GraphQL endpoint active. Supported operations: listTracks, getPrompt, generatePrompt'
+    }
+  });
+});
+
 // Health check endpoint for Render zero-downtime deploys
 app.get('/healthz', (req, res) => {
   res.status(200).json({ status: 'ok', uptime: process.uptime(), timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🎛️ DJ G-SUB & SOULCRAFT Server running at http://0.0.0.0:${PORT}`);
-});
+const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
+
+function startServer(port) {
+  const server = app.listen(port, '0.0.0.0', () => {
+    console.log(`🎛️ DJ G-SUB & SOULCRAFT Server running at http://0.0.0.0:${port}`);
+  });
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE' && !process.env.PORT) {
+      console.log(`Port ${port} is in use, trying ${port + 1}...`);
+      startServer(port + 1);
+    } else {
+      console.error('Server error:', err);
+    }
+  });
+}
+
+startServer(DEFAULT_PORT);
 
