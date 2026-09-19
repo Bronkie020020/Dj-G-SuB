@@ -7,7 +7,8 @@
   <meta name="description" content="DJ G-SUB & SOULCRAFT platform: 90s Chicago/Detroit underground house content hub, DDJ-FLX4 DJ stappenplan, SoundCloud mix streams en DSPy-gebaseerde AI Prompt Generator.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +16,19 @@
     <!-- Header with 90s Underground Branding -->
     <header class="header-top">
       <div class="brand-wrapper">
-        <img src="assets/logo.svg" alt="DJ G-SUB &amp; SOULCRAFT Vinyl Logo" class="logo-img">
+        <div class="brand-artwork-wrapper">
+          <img src="assets/g-sub-artwork.jpg" alt="DJ G-SUB Chicago House Vinyl Logo" class="brand-artwork-img">
+        </div>
+        <div class="brand-text-block">
+          <h1 class="brand-title">DJ G-SUB</h1>
+          <div class="brand-subtitle">
+            <span class="sub-cyan">CHICAGO HOUSE</span>
+            <span class="sub-sep">//</span>
+            <span class="sub-pink">UNDERGROUND</span>
+            <span class="sub-sep">//</span>
+            <span class="sub-yellow">SOULCRAFT</span>
+          </div>
+        </div>
       </div>
       <div class="header-badges">
         <span class="badge badge-chicago">CHICAGO HOUSE</span>
@@ -59,9 +72,7 @@
             <!-- Vinyl Platter -->
             <div class="vinyl-container">
               <div class="vinyl-disc" id="vinylDisc">
-                <div class="vinyl-center-label">
-                  G-SUB<br>33 RPM
-                </div>
+                <img src="assets/g-sub-artwork.jpg" alt="G-SUB 90s Vinyl Platter" class="vinyl-art-img">
                 <div class="vinyl-spindle"></div>
               </div>
               <!-- Tonearm -->
