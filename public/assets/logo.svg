@@ -1,73 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="100%" height="100%">
   <defs>
-    <!-- Glow Filters -->
-    <filter id="glow-yellow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <!-- Crisp Drop Shadows instead of Blurry Filters -->
+    <filter id="crisp-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.9" />
     </filter>
   </defs>
 
   <!-- Turntable Platter & Vinyl Record -->
   <g transform="translate(60, 60)">
     <!-- Outer Vinyl Rim -->
-    <circle cx="0" cy="0" r="48" fill="#121216" stroke="#2a2a38" stroke-width="3"/>
+    <circle cx="0" cy="0" r="48" fill="#14141A" stroke="#38384D" stroke-width="3"/>
     
     <!-- Vinyl Grooves -->
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#1f1f2a" stroke-width="1.5" stroke-dasharray="8 4"/>
-    <circle cx="0" cy="0" r="35" fill="none" stroke="#252533" stroke-width="1.2" stroke-dasharray="12 6"/>
-    <circle cx="0" cy="0" r="28" fill="none" stroke="#1c1c26" stroke-width="1.2"/>
-    <circle cx="0" cy="0" r="22" fill="none" stroke="#2a2a3a" stroke-width="1"/>
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#252535" stroke-width="1.5" stroke-dasharray="8 4"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#2C2C3F" stroke-width="1.2" stroke-dasharray="12 6"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#222232" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#323246" stroke-width="1"/>
     
     <!-- Center Label -->
-    <circle cx="0" cy="0" r="18" fill="#FF007F" filter="url(#glow-pink)"/>
+    <circle cx="0" cy="0" r="18" fill="#FF007F" stroke="#FFFFFF" stroke-width="1"/>
     <circle cx="0" cy="0" r="14" fill="#0D0D11"/>
-    <circle cx="0" cy="0" r="5" fill="#CCFF00" filter="url(#glow-yellow)"/>
-    <circle cx="0" cy="0" r="2" fill="#000"/>
+    <circle cx="0" cy="0" r="5" fill="#CCFF00"/>
+    <circle cx="0" cy="0" r="2" fill="#000000"/>
 
     <!-- Kinetic Geometrics on Vinyl -->
-    <polygon points="-8,-8 8,-8 0,6" fill="#00E5FF" opacity="0.85"/>
+    <polygon points="-8,-8 8,-8 0,6" fill="#00E5FF" stroke="#000000" stroke-width="0.5"/>
 
     <!-- Tonearm & Cartridge Needle -->
-    <path d="M 38 -45 L 20 -15 L 10 -4" fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" filter="url(#glow-cyan)"/>
+    <path d="M 38 -45 L 20 -15 L 10 -4" fill="none" stroke="#00E5FF" stroke-width="3.5" stroke-linecap="round"/>
     <!-- Cartridge Head -->
-    <rect x="7" y="-6" width="6" height="5" fill="#CCFF00" transform="rotate(30 10 -4)" filter="url(#glow-yellow)"/>
+    <rect x="7" y="-6" width="7" height="5" fill="#CCFF00" transform="rotate(30 10 -4)" stroke="#000000" stroke-width="0.8"/>
     <!-- Pivot Base -->
-    <circle cx="38" cy="-45" r="7" fill="#1e1e28" stroke="#00E5FF" stroke-width="2"/>
+    <circle cx="38" cy="-45" r="7" fill="#1E1E28" stroke="#00E5FF" stroke-width="2"/>
     <circle cx="38" cy="-45" r="3" fill="#CCFF00"/>
   </g>
 
-  <!-- Typography: DJ G-SUB & SOULCRAFT -->
-  <g transform="translate(130, 48)">
-    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-size="34" font-weight="900" letter-spacing="2" fill="#CCFF00" filter="url(#glow-yellow)">
+  <!-- Sharp, High-Contrast Typography: DJ G-SUB & SOULCRAFT -->
+  <g transform="translate(130, 50)">
+    <!-- Crisp Outer Glow/Stroke for Punchy Visibility -->
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-size="36" font-weight="900" letter-spacing="2.5" fill="#000000" stroke="#000000" stroke-width="5">
       DJ G-SUB
     </text>
-    <text x="0" y="28" font-family="'Courier New', monospace" font-size="14" font-weight="700" letter-spacing="4" fill="#00E5FF" filter="url(#glow-cyan)">
+    <text x="0" y="0" font-family="'Impact', 'Arial Black', sans-serif" font-size="36" font-weight="900" letter-spacing="2.5" fill="#CCFF00">
+      DJ G-SUB
+    </text>
+
+    <!-- Subtitle: SOULCRAFT -->
+    <text x="0" y="28" font-family="'Fira Code', 'Courier New', monospace" font-size="15" font-weight="800" letter-spacing="4" fill="#000000" stroke="#000000" stroke-width="3">
       SOULCRAFT
     </text>
-    <text x="130" y="28" font-family="'Courier New', monospace" font-size="10" font-weight="600" letter-spacing="2" fill="#FF007F">
+    <text x="0" y="28" font-family="'Fira Code', 'Courier New', monospace" font-size="15" font-weight="800" letter-spacing="4" fill="#00E5FF">
+      SOULCRAFT
+    </text>
+
+    <!-- Tagline: 90s CHICAGO & DETROIT -->
+    <text x="135" y="28" font-family="'Fira Code', 'Courier New', monospace" font-size="11" font-weight="800" letter-spacing="2" fill="#000000" stroke="#000000" stroke-width="2.5">
+      // 90s CHICAGO &amp; DETROIT
+    </text>
+    <text x="135" y="28" font-family="'Fira Code', 'Courier New', monospace" font-size="11" font-weight="800" letter-spacing="2" fill="#FF007F">
       // 90s CHICAGO &amp; DETROIT
     </text>
 
     <!-- Kinetic geometric accents -->
-    <polygon points="215, -15 225, -28 235, -15" fill="#FF007F" opacity="0.9"/>
-    <rect x="238" y="-26" width="10" height="10" fill="#00E5FF" transform="rotate(45 243 -21)"/>
-    <circle cx="260" cy="-21" r="5" fill="#CCFF00"/>
+    <polygon points="325, -15 335, -28 345, -15" fill="#FF007F" stroke="#000000" stroke-width="1"/>
+    <rect x="350" y="-26" width="10" height="10" fill="#00E5FF" transform="rotate(45 355 -21)" stroke="#000000" stroke-width="1"/>
+    <circle cx="372" cy="-21" r="5" fill="#CCFF00" stroke="#000000" stroke-width="1"/>
   </g>
 </svg>
